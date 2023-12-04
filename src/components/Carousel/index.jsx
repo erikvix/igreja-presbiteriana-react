@@ -5,7 +5,7 @@ export default function Carousel() {
   const [index, setIndex] = useState(0);
   const items = [
     {
-      imgUrl: "https://placehold.co/1500x400/png",
+      imgUrl: "https://placehold.co/1920x400/png",
     },
   ];
   return (

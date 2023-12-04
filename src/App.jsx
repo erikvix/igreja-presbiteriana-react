@@ -1,13 +1,17 @@
 import "./App.css";
 import Carousel from "./components/Carousel";
+import Eventos from "./components/Eventos";
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
       <Carousel />
-    </div>
+      <div className="App">
+        <Eventos />
+      </div>
+    </>
   );
 }
 
