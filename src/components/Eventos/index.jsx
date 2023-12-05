@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 
 export default function Eventos() {
   return (
@@ -13,17 +14,19 @@ export default function Eventos() {
         <div>
           <img src="https://placehold.co/200x200" alt="" />
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between  w-full">
           <div className="flex flex-col items-center px-6">
-            <h1 className="text-dark-green">11</h1>
-            <h1 className="text-dark-green">Jun</h1>
+            <h1 className="text-dark-green font-bold uppercase">11</h1>
+            <h1 className="text-dark-green font-bold uppercase">Jun</h1>
           </div>
           <div>
-            <h1 className="text-dark-green">fechados para reforma</h1>
+            <h1 className="text-dark-green font-bold uppercase">
+              fechados para reforma
+            </h1>
             <h3 className="text-dark-green">horarios</h3>
           </div>
-          <div>
-            <button>Inscrever-se</button>
+          <div className="px-6">
+            <Button>Inscrever-se</Button>
           </div>
         </div>
       </div>
