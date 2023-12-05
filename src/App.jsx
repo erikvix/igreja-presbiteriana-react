@@ -1,5 +1,6 @@
 import "./App.css";
 import Carousel from "./components/Carousel";
+import Eventos from "./components/Eventos";
 import NavBar from "./components/NavBar";
 const items = [
   {
@@ -11,8 +12,9 @@ function App() {
   return (
     <>
       <NavBar />
+      <Carousel />
       <div className="App">
-        <Carousel item={items} />
+        <Eventos />
       </div>
     </>
   );

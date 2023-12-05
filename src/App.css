@@ -2,8 +2,19 @@
   margin: 0 auto;
   padding: 0;
 }
+<<<<<<< HEAD
 .App {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
+=======
+
+.App{
+  
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+>>>>>>> origin/develop
