@@ -2,13 +2,14 @@ import React from "react";
 import Button from "../Button";
 import "./NavBar.css";
 import Logo from "../Logo";
+import logosvg from "../../assets/logo.svg";
 import NavLink from "../NavLink";
 
 export default function NavBar() {
   return (
     <div className="navbar-container">
       <div>
-        <Logo />
+        <Logo src={logosvg} />
       </div>
       <div className="nav-links-container">
         <ul className="nav-links">

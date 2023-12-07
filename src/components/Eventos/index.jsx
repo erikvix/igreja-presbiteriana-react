@@ -1,18 +1,21 @@
 import React from "react";
 import EventoBanner from "../EventoBanner";
+import banner1 from "../../assets/culto-celebracao";
+import banner2 from "../../assets/culto-esperanca";
+import banner3 from "../../assets/culto-mulheres";
 
 const items = [
   {
-    image: "https://placehold.co/190",
+    image: banner1,
     date: "18:00 - 20:15",
     title: "FECHADOS PARA REFORMA",
     day: "11",
     month: "jun",
   },
   {
-    image: "https://placehold.co/190",
+    image: "",
     date: "20:00 - 21:30",
-    title: "LIBERDADE",
+    title: "IBERDADE",
     day: "3",
     month: "jul",
   },

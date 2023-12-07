@@ -35,7 +35,7 @@ export default function QuemSomos() {
           </p>
           <Button>Saiba mais</Button>
         </div>
-        <div className="flex  ">
+        <div className="flex">
           <img src="https://placehold.co/500" alt="" />
         </div>
       </div>
