@@ -334,7 +334,7 @@ export default function Footer() {
             <p class="text-sm text-beige flex gap-2">
               <span class="block sm:inline">Todos os direitos reservados.</span>
               <a
-                class="inline-block text-dark-red underline transition hover:opacity-80"
+                class="inline-block  underline transition hover:opacity-80"
                 href="/"
               >
                 Termos de uso
@@ -342,7 +342,7 @@ export default function Footer() {
               <span>&middot;</span>
 
               <a
-                class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+                class="inline-block underline transition hover:opacity-80"
                 href="/"
               >
                 Política de Privacidade
@@ -350,7 +350,7 @@ export default function Footer() {
             </p>
 
             <p class="mt-4 text-sm text-white-beige sm:order-first sm:mt-0">
-              &copy; 2022 Company Name
+              &copy; 2022 Primeira Igreja Presbiteriana de Campo Grande
             </p>
           </div>
         </div>
