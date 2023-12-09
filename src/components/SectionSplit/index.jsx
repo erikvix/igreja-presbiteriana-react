@@ -6,11 +6,14 @@ export default function SectionSplit({
   src = img1,
   title = "Presbiterianismo",
   subTitle = "O que é?",
+  order = "first",
   desc = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur quis eius quos ea neque sunt, accusantium soluta minus veniam tempora deserunt? Molestiae eius quidem quam repellat.",
 }) {
   return (
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-      <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-first lg:h-full">
+      <div
+        class={`relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-${order} lg:h-full`}
+      >
         <img
           alt="Party"
           src={src}

@@ -16,7 +16,7 @@ const items = [
   {
     image: banner3,
     date: "20:00 - 21:30",
-    title: "IBERDADE",
+    title: "LIBERDADE",
     day: "3",
     month: "jul",
   },
