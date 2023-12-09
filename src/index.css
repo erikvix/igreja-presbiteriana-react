@@ -50,8 +50,6 @@ label {
 }
 a {
   font-weight: 500;
-  color: var(--black);
-  text-decoration: inherit;
 }
 
 body {
@@ -73,11 +71,12 @@ button {
   color: var(--black);
   background-color: #fff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s;
   box-shadow: 0 4px 10px 0 rgb(0 0 0 / 0.2);
 }
 button:hover {
   border-color: var(--green-light);
+  background-color: var(--green-light);
   color: #fff;
 }
 button:focus,

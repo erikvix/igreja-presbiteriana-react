@@ -7,25 +7,16 @@ import QuemSomos from "./components/Section/QuemSomos";
 import LocalEHorarios from "./components/Section/LocalEHorarios";
 import Contato from "./components/Section/Contato";
 import Footer from "./components/Footer";
-const items = [
-  {
-    url: "https://placehold.co/1500x500/png",
-  },
-];
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Carousel />
-      <div className="App">
-        <Section />
-        <PrimeiraNews />
-        <QuemSomos />
-        <LocalEHorarios />
-        <Contato />
-        <Footer />
+      <div>
+        <Outlet />
       </div>
+      <Footer />
     </>
   );
 }
