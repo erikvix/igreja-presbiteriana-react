@@ -4,6 +4,8 @@ import Button from "../Button";
 
 export default function SectionSplit({
   src = img1,
+  colorSubTitle = "[#612419]",
+  colorTitle = "dark-red",
   title = "Presbiterianismo",
   subTitle = "O que é?",
   order = "first",
@@ -21,10 +23,14 @@ export default function SectionSplit({
         />
       </div>
       <div class="lg:py-24">
-        <h2 class="text-2xl text-dark-red font-bold uppercase sm:text-3xl">
+        <h2
+          class={`text-2xl text-${colorTitle} font-bold uppercase sm:text-3xl`}
+        >
           {title}
         </h2>
-        <span className="text-[#612419] uppercase font-bold">{subTitle}</span>
+        <span className={`text-${colorSubTitle} uppercase font-bold`}>
+          {subTitle}
+        </span>
 
         <p class="mt-4 text-black-c">{desc}</p>
         <Button className={"mt-8 inline-block"}>Saiba mais</Button>
