@@ -4,8 +4,12 @@ import Button from "../Button";
 export default function ContatoForm() {
   return (
     <section>
-      <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <div class="rounded-lg bg-white-beige p-8 shadow-2xl lg:col-span-3 lg:p-12">
+      <div>
+        <div className="flex justify-center items-center gap-6 flex-col">
+          <h1 className="text-gray-600">Contato</h1>
+          <div className="border-b-4  border-gray-400 w-[1220px]"></div>
+        </div>
+        <div class="rounded-lg bg-white-beige lg:mt-8 lg:col-span-3">
           <form action="" class="space-y-4">
             <div>
               <label class="" for="assunto">
@@ -48,7 +52,7 @@ export default function ContatoForm() {
             </div>
 
             <div class="flex justify-between items-center mt-4">
-              <span className="text-sm">
+              <span className="text-xs  text-black-c">
                 Encaminhado para o e-mail pastor.romulo@primeiraipcg.exemplo.com
               </span>
               <Button>Enviar</Button>

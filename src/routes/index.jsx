@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Igreja from "../pages/Igreja";
 import Home from "../pages/Home";
-import QuemSomos1 from "../pages/QuemSomos1";
+import QuemSomos from "../pages/QuemSomos";
+import Contato from "../pages/Contato";
 
 const router = createBrowserRouter([
   {
@@ -19,12 +20,12 @@ const router = createBrowserRouter([
       },
       {
         path: "quem-somos",
-        element: <QuemSomos1 />,
+        element: <QuemSomos />,
       },
-      // {
-      //   path: "Contato",
-      //   element: <ContatoPage />,
-      // },
+      {
+        path: "contato",
+        element: <Contato />,
+      },
     ],
   },
 ]);
