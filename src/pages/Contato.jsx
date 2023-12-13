@@ -108,7 +108,7 @@ export default function Contato() {
         <div className="flex flex-col items-center justify-center mt-20 gap-4">
           <div className="flex-col flex gap-2 w-[600px] items-center">
             <h1 className="uppercase text-2xl text-gray-500 font-semibold">
-              código pix
+              onde estamos
             </h1>
             <span className="border-b-4 w-full border-gray-500"></span>
           </div>

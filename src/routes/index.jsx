@@ -3,7 +3,9 @@ import App from "../App";
 import Igreja from "../pages/Igreja";
 import Home from "../pages/Home";
 import QuemSomos from "../pages/QuemSomos";
+import Login from "../pages/Login";
 import Contato from "../pages/Contato";
+import Dashboard from "../pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
         element: <Contato />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 
