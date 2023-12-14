@@ -97,14 +97,13 @@ export default function Login() {
               </p>
             </div>
 
-            <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+            <div action="#" class="mt-8 grid grid-cols-6 gap-6">
               <div class="col-span-6">
                 <label
                   for="Email"
                   class="block text-sm font-medium text-gray-700"
                 >
-                  {" "}
-                  Email{" "}
+                  Email
                 </label>
 
                 <input
@@ -144,12 +143,12 @@ export default function Login() {
               <div class="col-span-6 flex sm:flex sm:items-center sm:gap-4">
                 <p class="flex gap-2 mt-4 text-sm text-gray-500 sm:mt-0">
                   Não tem uma conta ainda?
-                  <Link to={"/login"} class="text-gray-700 underline">
-                    Log in
+                  <Link to={"/cadastro"} class="text-gray-700 underline">
+                    Cadastre-se
                   </Link>
                 </p>
               </div>
-            </form>
+            </div>
           </div>
         </main>
       </div>

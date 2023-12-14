@@ -6,6 +6,7 @@ import QuemSomos from "../pages/QuemSomos";
 import Login from "../pages/Login";
 import Contato from "../pages/Contato";
 import Dashboard from "../pages/Dashboard";
+import Cadastro from "../pages/Cadastro";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/cadastro",
+    element: <Cadastro />,
   },
   {
     path: "/dashboard",
