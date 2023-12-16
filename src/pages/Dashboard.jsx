@@ -1,11 +1,13 @@
 import React from "react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
+import { FaSignInAlt, FaHome } from "react-icons/fa";
+import Button from "../components/Button";
 
 export default function Dashboard() {
   return (
     <div>
-      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
@@ -17,22 +19,32 @@ export default function Dashboard() {
                 class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span class="sr-only">Open sidebar</span>
+              </button>
+              <Link to={"/"} class="flex ms-2 md:me-24">
                 <svg
-                  class="w-6 h-6"
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 60 61"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-                  ></path>
+                    d="M59.0498 17.8575C58.6764 16.9428 57.8892 15.1227 56.0815 13.6977C55.5214 13.2559 54.9334 12.9105 54.3173 12.6554C53.6297 12.3723 52.2233 11.8962 50.484 12.1265C49.087 12.31 47.4037 12.9541 47.4286 13.5203C47.4441 13.8408 48.0104 14.1084 48.2998 14.2453C48.7541 14.46 49.171 14.4786 49.3981 14.4755C49.3888 15.1133 49.3888 15.7698 49.4043 16.4481C49.4106 16.7623 49.3732 17.3442 49.3421 17.8855C49.2052 17.6428 48.975 17.4344 48.6794 17.3099C48.2562 17.1357 47.8051 17.1793 47.4846 17.3908C47.5624 17.7642 47.8517 18.1158 48.2749 18.29C48.6358 18.4393 49.0185 18.4269 49.3234 18.29C49.3141 18.5047 49.3079 18.6945 49.3141 18.8376C48.3589 18.794 48.222 18.5887 47.5313 18.71C47.2357 18.7629 46.5263 18.8874 45.9538 19.4661C45.1199 20.3124 45.1946 21.5133 45.207 21.7747C45.3097 23.5761 46.8405 24.55 46.9743 24.6309C47.6682 25.0571 48.5518 25.2625 49.0247 25.1847C49.0808 25.1753 49.3203 25.1318 49.6533 25.1224C49.9737 25.1131 50.2102 25.1442 50.2693 25.1504C50.7765 25.2033 51.5481 24.9358 52.0988 24.5655C52.2606 24.4566 53.3932 23.6664 53.6639 22.1636C53.7261 21.812 53.9315 20.6515 53.2127 19.7181C52.6931 19.0429 51.9588 18.8376 51.7068 18.7723C50.9507 18.5731 50.7578 18.85 49.6221 18.8469L49.675 14.5191C50.148 14.5844 50.6271 14.6186 51.1125 14.5969C52.6869 14.5253 53.9066 15.2253 54.7809 16.4699C56.542 18.9745 56.9527 21.7716 56.2806 24.718C55.8792 26.4728 54.8182 27.7951 53.2096 28.632C51.5077 29.5156 49.6781 29.7054 47.8113 29.4161C46.5138 29.2138 45.3782 28.7565 44.4292 28.0315C44.2238 27.876 43.2406 27.1012 42.4814 25.7043C40.8479 22.6832 41.7129 19.4038 41.8249 18.9994C42.2232 17.5744 43.3153 15.0169 44.9146 12.8203C45.2444 12.366 45.9413 11.4544 45.6862 10.5459C45.5088 9.91433 44.9146 9.44763 44.3576 9.25784C43.7135 9.04005 43.0197 9.16139 40.459 10.6268C38.6761 11.6473 36.8684 12.6305 35.07 13.623C34.7713 13.7879 34.4384 13.903 34.1086 13.9933C33.7352 14.0959 33.5392 13.8844 33.6605 13.5141C33.7507 13.2403 33.8876 12.9821 34.0121 12.7207C34.6624 11.3829 35.0358 9.99211 34.9486 8.48624C34.8149 6.17453 32.9791 4.87711 30.798 5.61138C30.1322 5.83539 29.2236 6.61322 27.4221 8.12843C27.1825 8.33067 26.9274 8.54846 26.5945 8.52668C25.9286 8.48312 25.5864 7.52173 25.0605 6.579C24.2422 5.11357 23.3337 4.16773 22.1513 3.20011C21.2646 2.47517 20.356 1.70979 18.9652 1.04708C18.4052 0.779503 17.5371 0.375032 16.3859 0.15724C15.58 0.00478499 13.6229 -0.24412 11.4947 0.586601C10.6857 0.900844 7.54318 2.26982 6.4324 5.77939C5.65765 8.228 5.86612 11.7376 7.67697 13.0723C8.28681 13.5235 9.49094 14.0306 9.68073 15.1133C9.71496 15.3062 9.77408 15.6329 9.59672 15.9223C9.20157 16.5663 8.19347 16.1619 6.88045 16.7561C6.13682 17.0921 5.67632 17.5402 5.49586 18.0753C5.28117 18.7069 6.04036 19.1643 5.89723 20.1506C5.89723 20.1506 5.8599 20.4088 5.73233 20.7137C5.13493 22.1698 2.02351 22.4218 0.956286 24.3197C0.0881979 25.8629 -0.232279 27.7235 0.175318 29.6152C0.698038 32.0482 2.7018 33.3114 5.10382 32.7358C6.34839 32.4372 7.42495 31.8024 8.46727 31.09C9.02422 30.7104 9.58117 30.3152 10.1786 30.0103C10.7075 29.7396 11.1773 29.6712 11.5787 29.8019C12.2041 30.0041 12.5215 30.645 12.6086 30.8224C12.9602 31.5349 12.7579 32.0545 13.2402 32.4838C13.4051 32.6332 13.5731 32.6954 13.6665 32.7327C14.6808 33.1185 15.9129 32.3189 16.5943 31.8771C16.6192 31.8616 16.6379 31.8491 16.6472 31.8429C16.9521 31.6438 17.2384 31.4073 17.506 31.1304C18.2185 30.393 18.8034 29.5281 19.4257 28.7067C19.9142 28.0626 20.0418 27.7702 20.4743 27.2195C21.1681 26.339 21.4295 26.1896 21.6068 26.1118C22.17 25.8661 22.8794 25.8941 23.4426 26.2083C23.9466 26.4914 24.1582 26.927 24.5036 27.6551C24.9952 28.6911 25.1508 29.5623 25.1632 29.6339C25.6144 32.2598 25.437 32.4309 25.3094 35.6014C25.3094 35.6014 24.9236 45.094 23.8657 52.7136C23.8097 53.115 23.7786 53.3141 23.7662 53.4168C23.6479 54.4155 23.5017 55.4111 23.3461 56.4036C24.6996 56.7801 25.8664 57.3868 26.7936 57.9997C27.7052 57.4739 28.8565 56.9637 30.1882 56.6805C30.0326 55.9556 29.8583 55.1062 29.6872 54.095C29.5348 53.1928 29.4445 52.5083 29.373 51.998C29.1303 50.2868 29.0432 49.0329 28.844 46.4039C28.6698 44.1015 28.5795 42.9503 28.5298 42.2129C28.3586 39.6025 28.1968 37.1352 28.1439 33.8901C28.1253 32.7856 28.0133 33.243 28.1688 31.7776C28.312 30.4179 28.5795 29.0738 29.2329 27.8449C29.7339 26.899 30.4402 26.2145 31.5354 25.9936C32.4439 25.8132 33.3183 25.9843 34.1148 26.3639C36.2057 27.3595 38.2779 28.3987 40.3345 29.4658C42.9699 30.8317 45.5835 32.2349 48.4958 32.9536C50.0111 33.327 51.5419 33.4981 53.0789 33.103C54.2644 32.8012 55.2881 32.3065 56.1593 31.6438C57.8208 30.3775 58.5395 28.828 58.9595 27.8977C61.1158 23.0939 59.2894 18.4238 59.056 17.8575H59.0498Z"
+                    fill="#2E3C2A"
+                  />
+                  <path
+                    d="M32.6972 56.4477C30.2983 56.2486 28.2883 57.182 27.0251 58.0003L26.4401 58.3798L25.8801 57.9691C24.5359 56.9829 22.3953 55.841 19.8532 56.0184C15.8239 56.3015 13.2819 59.0177 12.7903 59.5684C12.4325 59.9728 12.168 60.3338 12 60.5827C13.2041 60.5671 14.4176 60.5547 15.6373 60.5547C19.2839 60.5484 22.8496 60.6107 26.3344 60.732C29.5298 60.6449 32.7937 60.6075 36.1229 60.6231C37.383 60.6293 38.6369 60.6418 39.8784 60.6636C38.1298 58.8714 36.4278 57.8851 35.2859 57.3407C34.4645 56.9486 33.7115 56.5317 32.6972 56.4477Z"
+                    fill="#2E3C2A"
+                  />
+                  <path
+                    d="M51.7129 18.7536C51.9649 18.8189 52.7054 19.0243 53.2282 19.7057C53.9531 20.6453 53.7447 21.8151 53.6824 22.1698C53.4117 23.685 52.2698 24.4815 52.1049 24.5904C51.5511 24.9638 50.7701 25.2345 50.2599 25.1785C50.2007 25.1722 49.9643 25.1411 49.6376 25.1505C49.3046 25.1598 49.062 25.2034 49.0059 25.2127C48.5299 25.2905 47.6369 25.0851 46.94 24.6558C46.8062 24.5749 45.2629 23.5917 45.1602 21.7747C45.1447 21.5133 45.07 20.2999 45.9132 19.4474C46.4888 18.8656 47.2044 18.738 47.5031 18.6852C48.2343 18.5545 48.3494 18.7909 49.4478 18.8189C50.7421 18.8532 50.9164 18.5358 51.716 18.7474L51.7129 18.7536Z"
+                    fill="#BB4430"
+                  />
+                  <path
+                    d="M47.4502 17.3877C47.7831 17.1668 48.2592 17.1202 48.7041 17.3037C49.149 17.4873 49.454 17.8544 49.5349 18.2465C49.2019 18.4674 48.7259 18.514 48.2809 18.3305C47.836 18.1469 47.5311 17.7798 47.4502 17.3877Z"
+                    fill="#2E3C2A"
+                  />
                 </svg>
-              </button>
-              <Link href="/" class="flex ms-2 md:me-24">
-                <Logo w={"40px"} />
               </Link>
             </div>
             <div class="flex items-center">
@@ -107,147 +119,83 @@ export default function Dashboard() {
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-          <ul class="space-y-2 font-medium">
+        <div class="h-full flex flex-col justify-between px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+          <ul class="space-y-2 font-medium mt-4">
             <li>
-              <a
-                href="#"
+              <Link
+                to={"/home"}
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <svg
-                  class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 21"
-                >
-                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                </svg>
-                <span class="ms-3">Dashboard</span>
-              </a>
+                <FaHome size={24} />
+                <span class="ms-3">Início</span>
+              </Link>
             </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 18 18"
-                >
-                  <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-                </svg>
-                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-                <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
-                  Pro
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
-                </svg>
-                <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
-                <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
-                  3
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 18"
-                >
-                  <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                </svg>
-                <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 18 20"
-                >
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
-                </svg>
-                <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 16"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
-                  />
-                </svg>
-                <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
-                  <path d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
-                  <path d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z" />
-                </svg>
-                <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
-              </a>
-            </li>
+          </ul>
+          <ul>
+            <Link
+              to={"/login"}
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <FaSignInAlt size={24} />
+              <span class="ms-3">Sair</span>
+            </Link>
           </ul>
         </div>
       </aside>
 
-      <div class="p-4 sm:ml-64"></div>
+      <div class="p-4 sm:ml-64">
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-14">
+          <div class="">
+            <div class="flex items-center flex-col rounded bg-gray-50 h-[630px]">
+              <h1 className="text-dark-red p-10 text-4xl font-bold">
+                Resgistro de postagem
+              </h1>
+              <div className="flex flex-col gap-4 mt-10">
+                <label class="relative block rounded-md border border-gray-200 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
+                  <input
+                    type="text"
+                    class="peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
+                    placeholder="Username"
+                  />
+
+                  <span class="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-gray-50 p-0.5 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
+                    Nome da postagem
+                  </span>
+                </label>
+                <label class="relative block rounded-md border border-gray-200 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
+                  <input
+                    type="text"
+                    class="peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
+                    placeholder="Username"
+                  />
+
+                  <span class="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-gray-50 p-0.5 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
+                    Sub-título
+                  </span>
+                </label>
+                <div>
+                  <label
+                    for="OrderNotes"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Descrição
+                  </label>
+
+                  <textarea
+                    id="OrderNotes"
+                    class="mt-2 w-full rounded-md focus-within:border-blue-600 font-medium border-gray-200 focus-within:ring-blue-600 shadow-sm sm:text-sm bg-gray-50 p-0.5 text-xs text-gray-700"
+                    rows="4"
+                    placeholder="Coloque a descrição da sua postagem..."
+                  ></textarea>
+                  <Button className={"bg-dark-red text-white mt-2"}>
+                    Enviar
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

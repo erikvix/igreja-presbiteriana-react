@@ -97,7 +97,7 @@ export default function Login() {
               </p>
             </div>
 
-            <div action="#" class="mt-8 grid grid-cols-6 gap-6">
+            <div class="mt-8 grid grid-cols-6 gap-6">
               <div class="col-span-6">
                 <label
                   for="Email"
